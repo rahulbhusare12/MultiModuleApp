@@ -15,4 +15,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "MultiModuleApp"
 include(":app")
- 
+include(":feature:category:ui")
+include(":feature:categoryDetails:ui")
+include(":core:common")
+include(":feature:category:data")
+include(":feature:category:domain")
