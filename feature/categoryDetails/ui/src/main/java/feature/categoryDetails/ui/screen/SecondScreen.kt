@@ -9,10 +9,10 @@ fun SecondScreen(){
 
 }
 
-object CategoryDetailsScreen :Screen{
+class CategoryDetailsScreen : Screen {
     @Composable
     override fun Content() {
-        Text(text = "Hello varad")
+        Text("Hello")
     }
 
 }

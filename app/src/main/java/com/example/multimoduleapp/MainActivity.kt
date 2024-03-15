@@ -15,6 +15,7 @@ import cafe.adriel.voyager.navigator.Navigator
 import com.example.multimoduleapp.ui.theme.MultiModuleAppTheme
 import com.feature.category.ui.screen.CategoryScreen
 import dagger.hilt.android.AndroidEntryPoint
+import feature.categoryDetails.ui.screen.CategoryDetailsScreen
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                   //  Greeting("Name ${student.getName()}")
 
-               Navigator(screen = CategoryScreen)
+               Navigator(screen = CategoryScreen )
                 }
             }
         }

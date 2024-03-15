@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.feature.category.domain.useCase.GetCategoryUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.launchIn
 
 import kotlinx.coroutines.flow.onEach
@@ -20,9 +22,17 @@ class CategoryViewModel @Inject constructor(private val getCategoryUseCase: GetC
         val Tag ="VM_STATE"
     private val _categoryState = mutableStateOf(CategoryState())
     val categoryList: State<CategoryState> = _categoryState
+    val sharedFlow= MutableSharedFlow<Int>()
 
     init {
         getCategoryList()
+    }
+
+    suspend fun updateFlow(){
+        repeat(10){
+            delay(1000)
+            sharedFlow.emit(it)
+        }
     }
 
 
