@@ -32,17 +32,6 @@ object CategoryScreen : Screen {
 
         Column {
 
-            scope.launch {
-                viewModel.sharedFlow.collect {
-
-                    Text(text = "Hello")
-                }
-            }
-
-
-            }
-
-
             Text(text = "Hello Rahul")
             Button(onClick = {
                 viewModel.getCategoryList()
@@ -73,11 +62,16 @@ object CategoryScreen : Screen {
                 }
             }
 
+            }
+
+
+
+
 
         }
     }
 
-}
+
 
 @Composable
 fun FirstScreen(a:Int) {
